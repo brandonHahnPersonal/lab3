@@ -1,0 +1,188 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z007sclg400-1",
+      "gen_directory": "../../../../brandonProj3Color.gen/sources_1/bd/brandonDesign",
+      "name": "brandonDesign",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1"
+    },
+    "design_tree": {
+      "brandonHorizCounter_0": "",
+      "brandonVertCounter_0": "",
+      "VS_comparator_0": "",
+      "VDE_comparator_0": "",
+      "HS_comparator_0": "",
+      "clk_wiz_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      }
+    },
+    "components": {
+      "brandonHorizCounter_0": {
+        "vlnv": "xilinx.com:module_ref:brandonHorizCounter:1.0",
+        "xci_name": "brandonDesign_brandonHorizCounter_0_0",
+        "xci_path": "ip\\brandonDesign_brandonHorizCounter_0_0\\brandonDesign_brandonHorizCounter_0_0.xci",
+        "inst_hier_path": "brandonHorizCounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "brandonHorizCounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "H_val": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "TC_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "brandonVertCounter_0": {
+        "vlnv": "xilinx.com:module_ref:brandonVertCounter:1.0",
+        "xci_name": "brandonDesign_brandonVertCounter_0_0",
+        "xci_path": "ip\\brandonDesign_brandonVertCounter_0_0\\brandonDesign_brandonVertCounter_0_0.xci",
+        "inst_hier_path": "brandonVertCounter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "brandonVertCounter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "TC_in": {
+            "direction": "I"
+          },
+          "V_val": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          }
+        }
+      },
+      "VS_comparator_0": {
+        "vlnv": "xilinx.com:module_ref:VS_comparator:1.0",
+        "xci_name": "brandonDesign_VS_comparator_0_0",
+        "xci_path": "ip\\brandonDesign_VS_comparator_0_0\\brandonDesign_VS_comparator_0_0.xci",
+        "inst_hier_path": "VS_comparator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VS_comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "countVal": {
+            "direction": "I"
+          },
+          "VS": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          }
+        }
+      },
+      "VDE_comparator_0": {
+        "vlnv": "xilinx.com:module_ref:VDE_comparator:1.0",
+        "xci_name": "brandonDesign_VDE_comparator_0_0",
+        "xci_path": "ip\\brandonDesign_VDE_comparator_0_0\\brandonDesign_VDE_comparator_0_0.xci",
+        "inst_hier_path": "VDE_comparator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VDE_comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "h_count": {
+            "direction": "I",
+            "left": "16",
+            "right": "0"
+          },
+          "v_count": {
+            "direction": "I",
+            "left": "16",
+            "right": "0"
+          },
+          "VDE": {
+            "direction": "O"
+          }
+        }
+      },
+      "HS_comparator_0": {
+        "vlnv": "xilinx.com:module_ref:HS_comparator:1.0",
+        "xci_name": "brandonDesign_HS_comparator_0_0",
+        "xci_path": "ip\\brandonDesign_HS_comparator_0_0\\brandonDesign_HS_comparator_0_0.xci",
+        "inst_hier_path": "HS_comparator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "HS_comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "countVal": {
+            "direction": "I",
+            "left": "16",
+            "right": "0"
+          },
+          "HS": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "brandonDesign_clk_wiz_0_0",
+        "xci_path": "ip\\brandonDesign_clk_wiz_0_0\\brandonDesign_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0"
+      }
+    },
+    "nets": {
+      "brandonHorizCounter_0_H_val": {
+        "ports": [
+          "brandonHorizCounter_0/H_val",
+          "VDE_comparator_0/h_count",
+          "HS_comparator_0/countVal"
+        ]
+      },
+      "brandonHorizCounter_0_TC_out": {
+        "ports": [
+          "brandonHorizCounter_0/TC_out",
+          "brandonVertCounter_0/TC_in"
+        ]
+      },
+      "brandonVertCounter_0_V_val": {
+        "ports": [
+          "brandonVertCounter_0/V_val",
+          "VDE_comparator_0/v_count",
+          "VS_comparator_0/countVal"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "brandonHorizCounter_0/clk",
+          "brandonVertCounter_0/clk"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-975,-328",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -350 -y -270 -defaultsOSRD
+preplace inst brandonHorizCounter_0 -pg 1 -lvl 2 -x -30 -y -120 -defaultsOSRD
+preplace inst brandonVertCounter_0 -pg 1 -lvl 2 -x -30 -y 70 -defaultsOSRD
+preplace inst VS_comparator_0 -pg 1 -lvl 3 -x 210 -y -10 -defaultsOSRD
+preplace inst VDE_comparator_0 -pg 1 -lvl 3 -x 210 -y -150 -defaultsOSRD
+preplace inst HS_comparator_0 -pg 1 -lvl 3 -x 210 -y -260 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -240 -y -280 -defaultsOSRD
+preplace netloc brandonHorizCounter_0_TC_out 1 1 2 -140 0 80
+preplace netloc brandonHorizCounter_0_H_val 1 2 1 80 -260n
+preplace netloc brandonVertCounter_0_V_val 1 2 1 90 -140n
+preplace netloc clk_in1_0_1 1 0 1 N -270
+preplace netloc clk_wiz_0_clk_out1 1 1 1 -150 -290n
+levelinfo -pg 1 -350 -240 -30 210 340
+pagesize -pg 1 -db -bbox -sgen -420 -350 340 260
+"
+}
+
